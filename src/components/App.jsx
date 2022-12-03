@@ -1,16 +1,17 @@
+import { NavBar } from "./NavBar/NavBar";
+import { Routes, Route } from 'react-router-dom';
+import MainPage from "pages/MainPage";
+
+
 export const App = () => {
+ 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<MainPage/>}/>
+      </Routes>
+
+    </>
   );
 };
